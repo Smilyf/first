@@ -1,0 +1,292 @@
+/* 清除浏览器默认边距，
+使边框和内边距的值包含在元素的width和height内 */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #1b1b1b;
+    border-bottom: 2px solid #ffffff;
+
+}
+
+header .logo {
+    width: 20%;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header .navigation {
+
+    height: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-items: stretch;
+    align-items: center;
+}
+
+header .navigation>div {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 12%;
+    min-height: 80%;
+    text-align: center;
+    border: 5px solid #1b1b1b;
+}
+
+header .navigation div a {
+
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header .navigation>div:hover {
+
+    background: rgba(148, 154, 199, 0.377);
+    border-radius: 10px;
+}
+
+header .navigation>div:hover>div {
+
+    visibility: visible;
+}
+
+header .navigation>div>div {
+
+    visibility: hidden;
+    position: fixed;
+    top: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    width: 250px;
+    background: #030303da;
+    border: 1px solid #ffffffbe;
+    border-radius: 5px;
+    justify-items: center;
+    align-items: center;
+}
+
+header .navigation>div>div>div {
+    width: 80%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .navigation>div>div>div:hover {
+    background: rgba(148, 154, 199, 0.377);
+    border-radius: 10px;
+}
+
+
+header>.search {
+    width: 20%;
+    height: 55%;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 2px 20px 2px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.transition>.search {
+    width: 55%;
+    height: 30%;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 2px 20px 2px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+
+ .search div {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.search div input::placeholder {
+
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.search>div>input {
+
+    width: 100%;
+    height: 80%;
+    outline: none;
+    border: 0;
+    background: #1b1b1b;
+    color: rgb(255, 255, 255);
+
+}
+
+ .search>div >i {
+    color: #fff;
+}
+
+ .search >div >i:active {
+    color: rgb(177, 128, 206);
+
+}
+
+header .user {
+    width: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+header .user div i {
+    font-size: large;
+    color: #fff;
+
+}
+
+header .user div {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.transition {
+    width: 100%;
+    height: 25vh;
+    background: #141414f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.transition h2 {
+    color: rgb(255, 255, 255);
+}
+.sbottom {
+    width: 100%;
+    height: 2vh;
+    background: #181717f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.banner {
+    width: 100%;
+    padding: 8vh 0px 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .content {
+    max-width: 1000px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.banner .content>h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.banner .content>p {
+    font-size: 1em;
+    color: #333;
+}
+
+.banner .content>a {
+    display: inline-block;
+    background: #434978;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+
+}
+
+.banner .image {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.banner .image>img {
+    padding: 2% 2%;
+    max-width: 80%;
+
+}
+
+
+
+/*屏幕宽度小于991px,改变布局和样式*/
+@media screen and (max-width:991px) {
+
+    .banner .content h2 {
+        font-size: 2em;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .search {
+        width: 60%;
+    }
+
+    header .logo {
+        width: 30%;
+    }
+}
+
+/*屏幕宽度小于600px,改变布局和样式*/
+@media screen and (max-width:600px) {}
