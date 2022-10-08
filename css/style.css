@@ -18,27 +18,34 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 8vh;
+    height: 4rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background: #1b1b1b;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 0.15rem solid #ffffff;
 
 }
 
-header .logo {
-    width: 20%;
-    font-size: 1.5em;
-    color: #fff;
+header .logos {
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .logos>a {
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.3rem;
+    color: #ffffff;
 }
 
-header .navigation {
+header>.navigation {
 
     height: 100%;
-    width: 65%;
+    min-width: 50%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -46,7 +53,16 @@ header .navigation {
     align-items: center;
 }
 
-header .navigation>div {
+header>.navigation-simplify {
+    display: none;
+}
+
+header>.navigation-simplify>div>i {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+header>.navigation>div {
 
     display: flex;
     flex-direction: column;
@@ -54,21 +70,21 @@ header .navigation>div {
     width: 12%;
     min-height: 80%;
     text-align: center;
-    border: 5px solid #1b1b1b;
+    border: 0.2rem solid #1b1b1b;
 }
 
-header .navigation div a {
+header>.navigation>div a {
 
     text-decoration: none;
     color: #fff;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-weight: 550;
+    letter-spacing: 0.2rem;
 }
 
 header .navigation>div:hover {
 
-    background: rgba(148, 154, 199, 0.377);
-    border-radius: 10px;
+    background: rgba(114, 120, 158, 0.5);
+    border-radius: 0.8rem;
 }
 
 header .navigation>div:hover>div {
@@ -80,22 +96,55 @@ header .navigation>div>div {
 
     visibility: hidden;
     position: fixed;
-    top: 7vh;
+    top: 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 400px;
-    width: 250px;
+    height: 20rem;
+    width: 15rem;
     background: #030303da;
-    border: 1px solid #ffffffbe;
-    border-radius: 5px;
+    border: 0.1rem solid #ffffffbe;
+    border-radius: 0.5rem;
     justify-items: center;
     align-items: center;
 }
 
 header .navigation>div>div>div {
-    width: 80%;
+    width: 95%;
     height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+}
+header .navigation>div>div>div>div {
+    width: 85%;
+    border-left: 0.3rem  solid #fff;
+}
+  
+header .navigation>div>div>div:hover {
+    background: rgba(148, 154, 199, 0.377);
+   
+}
+
+
+
+header>.search {
+    width: 15%;
+    height: 2rem;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 0rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+header .user {
+    width: 10%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,22 +152,6 @@ header .navigation>div>div>div {
 
 }
 
-header .navigation>div>div>div:hover {
-    background: rgba(148, 154, 199, 0.377);
-    border-radius: 10px;
-}
-
-
-header>.search {
-    width: 20%;
-    height: 55%;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    padding: 2px 20px 2px;
-    display: flex;
-    justify-content: space-between;
-
-}
 .transition>.search {
     width: 55%;
     height: 30%;
@@ -131,9 +164,7 @@ header>.search {
 }
 
 
-
-
- .search div {
+.search>div {
 
     height: 100%;
     display: flex;
@@ -159,23 +190,15 @@ header>.search {
 
 }
 
- .search>div >i {
+.search>div>i {
     color: #fff;
 }
 
- .search >div >i:active {
+.search>div>i:active {
     color: rgb(177, 128, 206);
 
 }
 
-header .user {
-    width: 5%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
 
 header .user div i {
     font-size: large;
@@ -193,16 +216,18 @@ header .user div {
 
 .transition {
     width: 100%;
-    height: 25vh;
+    height: 15rem;
     background: #141414f8;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .transition h2 {
     color: rgb(255, 255, 255);
 }
+
 .sbottom {
     width: 100%;
     height: 2vh;
@@ -216,7 +241,7 @@ header .user div {
 
 .banner {
     width: 100%;
-    padding: 8vh 0px 0px;
+    padding: 4rem 0rem 0rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -280,12 +305,22 @@ header .user div {
     }
 
     header .search {
-        width: 60%;
+        width: 40%;
     }
 
     header .logo {
-        width: 30%;
+        width: 15%;
     }
+    header>.navigation-simplify {
+        display: flex;
+        height: 100%;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        justify-items: stretch;
+        align-items: center;
+    }
+    
 }
 
 /*屏幕宽度小于600px,改变布局和样式*/
